@@ -1,0 +1,92 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+
+}
+/*different color hues */
+:root {
+    --hue-neutral: 240;
+    --hue-wrong: 0;
+    --hue-correct: 114;
+    --hue-btn: 200
+
+
+}
+/*Variables for color selection created within CSS*/
+body{
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 27%);
+}
+
+
+body.correct {
+    --hue: var(--hue-correct);
+}
+
+body.wrong {
+    --hue: var(--hue-wrong);
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border: 15px solid black;
+    border-radius: 30px;
+    padding: 80px;
+
+
+}
+
+.btn-grid {
+    display: grid;
+    gap: 10px;
+    margin: 20px;
+
+}
+
+.btn {
+    --hue: var(--hue-btn);
+    background-color: hsl(var(--hue), 100%, 27%);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+.btn.correct {
+    --hue : var(--hue-correct);
+}
+.btn.wrong {
+    --hue : var(--hue-wrong);
+}
+
+.btn:hover {
+    border-color: black;
+    
+}
+
+.start-btn, .next-btn {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hide {
+    display: none;
+}
